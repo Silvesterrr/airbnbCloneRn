@@ -6,6 +6,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 import HomeScreen from './src/screens/home';
 import Post from './src/components/Post';
+import SearchResultsScreen from './src/screens/SearchResults';
+
 
 import feed from './assets/data/feed';
 
@@ -16,11 +18,12 @@ export default function App() {
   return (
     <>
     <StatusBar barStyle="dark-content"/>
-    <ScrollView>
-      <Post post={post1} />
+    <SafeAreaView>
+      {/* <Post post={post1} />
       <Post post={post2} />
-      <Post post={post3} />
-    </ScrollView>
+      <Post post={post3} /> */}
+      <SearchResultsScreen />
+    </SafeAreaView>
     </>
   );
 }

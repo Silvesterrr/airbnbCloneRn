@@ -5,12 +5,15 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 import HomeScreen from './src/screens/home';
+import Post from './src/components/Post';
+
+
 export default function App() {
   return (
     <>
     <StatusBar barStyle="dark-content"/>
     <SafeAreaView>
-      <HomeScreen/>
+      <Post/>
     </SafeAreaView>
     </>
   );

@@ -6,6 +6,7 @@ import {
     Pressable } from 'react-native'
 import Icon  from 'react-native-vector-icons/FontAwesome'
 import styles from './styles'
+import Fontisto from 'react-native-vector-icons/Fontisto'
 
 const HomeScreen = (props) => {
     return (
@@ -22,7 +23,7 @@ const HomeScreen = (props) => {
                 
             </ImageBackground>
             <Pressable style={styles.searchBtn} onPress={() => console.warn("exlore btn clicked")}>
-                <Icon name="search" size={25} color={"#f15454"} />
+                <Fontisto name="search" size={25} color={"#f15454"} />
                 <Text style={styles.searchBtnTxt}>Where are you going?</Text>
             </Pressable>
             

@@ -8,7 +8,7 @@ import HomeScreen from './src/screens/home';
 import Post from './src/components/Post';
 import SearchResultsScreen from './src/screens/SearchResults';
 import DestinationSearch from './src/screens/DestinationSearch';
-
+import Guests from './src/screens/Guests';
 import feed from './assets/data/feed';
 
 const post1 = feed[0];
@@ -22,7 +22,7 @@ export default function App() {
       {/* <Post post={post1} />
       <Post post={post2} />
       <Post post={post3} /> */}
-      <DestinationSearch />
+      <Guests />
     </SafeAreaView>
     </>
   );

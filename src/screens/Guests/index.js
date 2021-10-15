@@ -81,7 +81,16 @@ const Guests = () => {
                 {/* Row 3: infants */}
             </View>
 
-            <Pressable style={styles.search} onPress={() => navigation.navigate()}>
+            <Pressable 
+                style={styles.search} 
+                onPress={() => 
+                navigation.navigate('Home',{
+                    screen: 'Explore',
+                    params: {
+                        screen: 'SearchResults'
+                    }
+                })
+            }>
                 <Text style={styles.searchtxt}>Search</Text>
             </Pressable>
 

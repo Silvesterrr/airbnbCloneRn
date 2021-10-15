@@ -3,6 +3,11 @@ import { StyleSheet, StatusBar } from "react-native"
 const styles = StyleSheet.create({
     container: {
         paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+        justifyContent: "space-between",
+        height: '100%'
+    },
+    rows: {
+        
     },
     row: {
         flexDirection: "row",
@@ -38,6 +43,20 @@ const styles = StyleSheet.create({
     btntxt: {
         fontSize: 20,
         color: "#474747"
+    },
+    search: {
+        marginBottom: 20,
+        backgroundColor: '#f15454',
+        alignItems: "center",
+        justifyContent: "center",
+        height: 50,
+        marginHorizontal: 20,
+        borderRadius: 10
+    },
+    searchtxt: {
+        fontSize: 20,
+        color: "#fff",
+        fontWeight: "bold"
     }
 })
 

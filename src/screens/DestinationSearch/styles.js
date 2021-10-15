@@ -3,7 +3,9 @@ import { StyleSheet, StatusBar } from "react-native"
 const styles = StyleSheet.create({
     container: {
         paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
-        margin: 20
+        padding: 20,
+        height: '100%',
+        backgroundColor: '#fff'
     },
     textinput: {
         fontSize: 20,
@@ -15,7 +17,8 @@ const styles = StyleSheet.create({
         alignItems: "center",
         paddingVertical: 15,
         borderBottomWidth: 1,
-        borderBottomColor: 'lightgrey'
+        borderBottomColor: 'lightgrey',
+
     },
     iconcontainer: {
         backgroundColor: "#e7e7e7",

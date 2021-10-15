@@ -1,36 +1,40 @@
 import React, {useState} from 'react'
 import { View, Text, TextInput, FlatList, SafeAreaView, Pressable } from 'react-native'
 import styles from './styles';
-
-import search from '../../../assets/data/search';
-import Entypo from 'react-native-vector-icons/Entypo'
-
+import SuggestionRow from './SuggestionRow';
 import { useNavigation } from '@react-navigation/core';
+
+import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 const DestinationSearch = () => {
 
-    const [inputText, setInputText] = useState('');
+
 
     const navigation = useNavigation();
     return (
         <View style={styles.container}>
-            <TextInput 
-                style={styles.textinput} 
-                placeholder="Where are you going?"
-                value={inputText}
-                onChangeText={setInputText}
-            />
-            <FlatList
-                data={search}
-                renderItem={({item}) => (
-                    <Pressable style={styles.row} onPress={() => navigation.navigate('Guests')}>
-                        <View style={styles.iconcontainer}>
-                            <Entypo name={'location-pin'} size={30} />
-                        </View>
-                        <Text style={styles.locationtxt}>{item.description}</Text>
-                    </Pressable>
-                    
-                )}
-            />
+            
+                <GooglePlacesAutocomplete
+                    placeholder='Where are you going?'
+                    onPress={(data, details = null) => {
+                        console.log(data, details);
+                        navigation.navigate('Guests');
+                    }}
+                    fetchDetails
+                    styles={{
+                        textInput: styles.textinput
+                    }}
+                    query={{
+                        key: 'AIzaSyA7Hv4J7kEv8A-qwivi4nhNfkJndKv1qBM',
+                        language: 'pl',
+                        types: '(cities)'
+                    }}
+                    suppressDefaultStyles
+                    enablePoweredByContainer={false}
+                    renderRow={(item) => <SuggestionRow item={item} />}
+                />
+
+ 
+       
         </View>
        
     )

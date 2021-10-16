@@ -11,6 +11,16 @@ const styles = StyleSheet.create({
         width: Dimensions.get('window').width,
         height: Dimensions.get('window').height,
       },
+      pointerview: {
+        backgroundColor: "#fff",
+        padding: 5,
+        borderRadius: 20,
+        borderColor: 'grey',
+        borderWidth: 1
+      },
+      pointertxt: {
+        fontWeight: "bold"
+      }
 })
 
 export default styles;

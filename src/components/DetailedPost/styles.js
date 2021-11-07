@@ -9,7 +9,8 @@ import { StyleSheet } from "react-native"
 
 const styles = StyleSheet.create({
     container: {
-        margin:20,
+        marginHorizontal:20,
+        marginTop: 10,
     },
     image: {
         width: '100%',
@@ -42,7 +43,11 @@ const styles = StyleSheet.create({
         color: '#5b5b5b',
         textDecorationLine: "underline",
     },
-    
+    longDesc:{
+        marginVertical: 20,
+        fontSize:16,
+        lineHeight:24,
+    }
 })
 
 export default styles;
